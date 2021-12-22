@@ -13,6 +13,6 @@ async function run() {
         issue_number: pull_request.number,
         body: 'Obrigado por enviar uma solicitação de pull! Tentaremos revisar isso o mais rápido possível.'
     });
-}
+};
 
 run();
