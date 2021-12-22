@@ -8,11 +8,11 @@ async function run() {
     const { context = {} } = github;
     const { pull_request } = context.payload;
 
-    await octokit.issues.createComment({
+    await octokit.rest.issues.createComment({
         ...context.repo,
         issue_number: pull_request.number,
-        body: 'Obrigado por enviar uma solicitação de pull! Tentaremos revisar isso o mais rápido possível.'
+        body: 'Obrigado por enviar uma solicitação de pull! Revisaremos isso o mais rápido possível.'
     });
-};
+}
 
 run();
